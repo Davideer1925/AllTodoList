@@ -22,9 +22,9 @@ export const TodoInput = ({setTodoLists, todoLists, inProBox}) => {
         onChange={(e)=>setInputValue(e.target.value)} 
         value={inputValue} 
         ref={inputFocus}
-        disabled={activeList.length===5}/>
+        disabled={activeList.length>=5}/>
         <button
-        disabled={!inputValue || activeList.length===5} 
+        disabled={!inputValue || activeList.length>=5} 
         onClick={onClickAdd}>Add</button>
         </>
     )
